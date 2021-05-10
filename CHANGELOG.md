@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.0](https://github.com/extra2000/nodejs-examples/compare/v1.0.0...v1.1.0) (2021-05-10)
+
+
+### Features
+
+* **examples:** Add `redis-pubsub` example ([7c2f37d](https://github.com/extra2000/nodejs-examples/commit/7c2f37da2c8907c50dac8b7efffa3472f0e0e263))
+
+
+### Fixes
+
+* Prefix image name with project name, to prevent image conflicts ([92d582a](https://github.com/extra2000/nodejs-examples/commit/92d582acf5459ceedb25548dfe128c27edabac5b))
+* Remove port bindings to prevent conflicts with other users ([944cdd1](https://github.com/extra2000/nodejs-examples/commit/944cdd144674e89f5742516a8f88a3bd1843cbe1))
+
 ## 1.0.0 (2021-05-10)
 
 
