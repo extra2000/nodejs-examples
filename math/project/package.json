@@ -1,0 +1,16 @@
+{
+  "name": "math",
+  "version": "1.0.0",
+  "description": "For playground purpose",
+  "main": "src/main.ts",
+  "author": "extra2000",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node src/main.ts"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2",
+    "ts-node": "^9.0.0"
+  }
+}
