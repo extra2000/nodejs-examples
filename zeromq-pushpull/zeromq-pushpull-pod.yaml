@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: zeromq-pushpull-pod
+spec:
+  restartPolicy: Never
+  containers:
+  - name: producer
+    image: extra2000/zeromq-pushpull
+    command: ['npm', 'run', 'producer']
+    ports:
+    - containerPort: 3000
+      hostPort: 3000
+      protocol: tcp
+  - name: worker
+    image: extra2000/zeromq-pushpull
+    command: ['npm', 'run', 'worker']
