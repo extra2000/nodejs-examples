@@ -6,7 +6,7 @@ spec:
   restartPolicy: Never
   containers:
   - name: webservice
-    image: localhost/extra2000/webservice
+    image: extra2000/kong-podman/webservice
     ports:
     - containerPort: 8000
       protocol: tcp

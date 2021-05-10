@@ -6,5 +6,5 @@ spec:
   restartPolicy: Never
   containers:
   - name: consumer
-    image: extra2000/prodcon
+    image: extra2000/kafka-pubsub/prodcon
     command: ['npm', 'run', 'consumer']

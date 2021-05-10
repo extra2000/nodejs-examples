@@ -34,7 +34,7 @@ $ podman run -it --rm --network=sampleapps docker.io/curlimages/curl curl http:/
 ## Running NodeJS webservice
 
 ```
-$ podman build -t extra2000/webservice:latest .
+$ podman build -t extra2000/kong-podman/webservice .
 $ podman play kube --network=sampleapps webservice-pod.yaml
 ```
 

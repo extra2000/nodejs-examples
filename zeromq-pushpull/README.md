@@ -1,7 +1,7 @@
 # Sample apps: ZeroMQ Push/Pull
 
 ```
-$ podman build -t extra2000/zeromq-pushpull:latest .
+$ podman build -t extra2000/zeromq-pushpull/pushpull .
 $ podman play kube --network=sampleapps zeromq-pushpull-pod.yaml
 ```
 

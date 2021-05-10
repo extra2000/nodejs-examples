@@ -21,7 +21,7 @@ $ podman run -it --rm --network=sampleapps docker.io/bitnami/kafka:2.6.0 /opt/bi
 ## Deploy producer and consumer services
 
 ```
-$ podman build -t extra2000/prodcon:latest .
+$ podman build -t extra2000/kafka-pubsub/prodcon .
 $ podman play kube --network=sampleapps producer-pod.yaml
 $ podman play kube --network=sampleapps consumer-pod.yaml
 ```
