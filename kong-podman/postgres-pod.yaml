@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres-pod
+spec:
+  restartPolicy: Never
+  containers:
+  - name: postgres
+    image: docker.io/postgres:13.1-alpine
+    ports:
+    - containerPort: 5432
+      protocol: tcp
+    env:
+    - name: POSTGRES_PASSWORD
+      value: abcde12345
+    volumeMounts:
+    - mountPath: /docker-entrypoint-initdb.d/initdb.sql
+      name: initdb
+      readOnly: true
+  volumes:
+  - name: initdb
+    hostPath:
+      path: ./initdb.sql

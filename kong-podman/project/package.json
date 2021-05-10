@@ -1,0 +1,21 @@
+{
+    "name": "webservice",
+    "version": "1.0.0",
+    "description": "Dummy webservice",
+    "author": "extra2000",
+    "license": "MIT",
+    "main": "src/webservice.ts",
+    "scripts": {
+        "tsc": "tsc",
+        "webservice": "ts-node src/webservice.ts"
+    },
+    "dependencies": {
+        "express": "^4.16.1",
+        "body-parser": "1.18.3"
+    },
+    "devDependencies": {
+        "typescript": "^4.0.2",
+        "ts-node": "^9.0.0",
+        "@types/node": "^14.11.2"
+    }
+}
