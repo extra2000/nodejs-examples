@@ -7,16 +7,6 @@ spec:
   containers:
   - name: kong
     image: docker.io/library/kong:2.3.0
-    ports:
-    - containerPort: 8000
-      hostPort: 8000
-      protocol: tcp
-    - containerPort: 8443
-      protocol: tcp
-    - containerPort: 8001
-      protocol: tcp
-    - containerPort: 8444
-      protocol: tcp
     volumeMounts:
     - mountPath: /etc/kong/kong.conf
       name: kongconf
