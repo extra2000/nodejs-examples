@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: publisher-pod
+spec:
+  restartPolicy: Never
+  containers:
+  - name: publisher
+    image: extra2000/redis-pubsub/pubsub
+    command: ['npm', 'run', 'publisher']

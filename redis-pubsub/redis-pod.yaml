@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: redis-pod
+  name: redis-pod
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: redis01
+    image: docker.io/redis:6.2-alpine
+    command: ['redis-server', '--requirepass', "abcde12345"]
+    securityContext:
+      allowPrivilegeEscalation: false
+      privileged: false
+      capabilities:
+        add: []
+        drop:
+        - CAP_MKNOD
+        - CAP_NET_RAW
+        - CAP_AUDIT_WRITE
+      seLinuxOptions: {}
+    resources:
+      requests:
+        memory: 200Mi
+      limits:
+        memory: 200Mi

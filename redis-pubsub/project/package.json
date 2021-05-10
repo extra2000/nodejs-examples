@@ -1,0 +1,14 @@
+{
+  "name": "redis-pubsub",
+  "version": "1.0.0",
+  "description": "Redis Pub/Sub example",
+  "author": "extra2000",
+  "license": "MIT",
+  "scripts": {
+    "publisher": "node src/publisher.js",
+    "subscriber": "node src/subscriber.js"
+  },
+  "dependencies": {
+    "redis": "^3.1.2"
+  }
+}
