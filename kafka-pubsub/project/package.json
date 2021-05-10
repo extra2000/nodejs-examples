@@ -1,0 +1,21 @@
+{
+  "name": "kafka-pubsub",
+  "version": "1.0.0",
+  "description": "Kafka Pub/Sub example",
+  "author": "extra2000",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc",
+    "producer": "ts-node src/producer.ts",
+    "consumer": "ts-node src/consumer.ts"
+  },
+  "dependencies": {
+    "kafka-node": "^5.0.0",
+    "body-parser": "^1.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2",
+    "ts-node": "^9.0.0",
+    "@types/node": "^14.11.2"
+  }
+}
