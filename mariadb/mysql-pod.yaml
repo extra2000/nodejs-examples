@@ -1,0 +1,47 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: mariadb-mariadb-pod
+  name: mariadb-mariadb-pod
+spec:
+  restartPolicy: Never
+  containers:
+  - name: mysql01
+    image: docker.io/mariadb:10.3
+    securityContext:
+      allowPrivilegeEscalation: false
+      privileged: false
+      capabilities:
+        add: []
+        drop:
+        - CAP_MKNOD
+        - CAP_NET_RAW
+        - CAP_AUDIT_WRITE
+      seLinuxOptions: {}
+    resources:
+      requests:
+        memory: 500Mi
+      limits:
+        memory: 500Mi
+    ports:
+    - containerPort: 3306
+      hostPort: 23306
+      hostIP: 0.0.0.0
+      protocol: tcp
+    env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: abcde12345
+      - name: MYSQL_DATABASE
+        value: mydb
+      - name: MYSQL_USER
+        value: myuser
+      - name: MYSQL_PASSWORD
+        value: abcde12345
+    volumeMounts:
+    - mountPath: /var/lib/mysql
+      name: sampleapps-mariadb-data
+  volumes:
+  - name: sampleapps-mariadb-data
+    persistentVolumeClaim:
+      claimName: sampleapps-mariadb-data

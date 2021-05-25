@@ -1,0 +1,21 @@
+{
+  "name": "mariadbapp",
+  "version": "1.0.0",
+  "description": "For playground purpose",
+  "main": "src/main.ts",
+  "author": "extra2000",
+  "license": "MIT",
+  "scripts": {
+    "tsc": "tsc",
+    "dev": "ts-node src/main.ts"
+  },
+  "dependencies": {
+    "knex": "^0.95.6",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2",
+    "ts-node": "^9.0.0",
+    "@types/node": "^15.6.0"
+  }
+}
