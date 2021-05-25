@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/extra2000/nodejs-examples/compare/v1.1.0...v1.2.0) (2021-05-25)
+
+
+### Features
+
+* **sampleapps:** add `mariadb` with `knex` ([f329555](https://github.com/extra2000/nodejs-examples/commit/f3295552b32035e594efb2c21e733982a416fd1c))
+
+
+### Performance Improvements
+
+* **math:** optimize build performance ([69198c4](https://github.com/extra2000/nodejs-examples/commit/69198c4a50264796ea2abaf25af931ffd775b93b))
+
 ## [1.1.0](https://github.com/extra2000/nodejs-examples/compare/v1.0.0...v1.1.0) (2021-05-10)
 
 
